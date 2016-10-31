@@ -112,10 +112,10 @@ done
 
 
 cat > iplist <<EOF
-root password 10.1.226.201 dang dang
-root password 10.1.226.202 dang dang
-root password 10.1.226.203 dang dang
-root password 10.1.226.204 dang dang
+root password 192.168.1.1 dang dang
+root password 192.168.1.1 dang dang
+root password 192.168.1.1 dang dang
+root password 192.168.1.1 dang dang
 EOF
 
 
