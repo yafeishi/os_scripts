@@ -91,15 +91,15 @@ ps auxw|head -1;ps auxw|sort -rn -k4|head -10
 3.虚拟内存使用最多的前10个进程 
 ps auxw|head -1;ps auxw|sort -rn -k5|head -10
 
-
+# 查看硬件信息
 lscpu
 hdparm  -i /dev/sda1  
 hdparm -tT /dev/sdb1
 dd if=/dev/zero of=toto bs=8k count=244140
 
-
-scp -r pgsql_xc danghb@10.1.239.18:/home/danghb/adb21
-scp datanodeExtraConfig danghb@10.1.239.18:/home/danghb/pgxc_ctl
+# scp
+scp -r pgsql_xc danghb@192.168.1.1:/home/danghb/adb21
+scp datanodeExtraConfig danghb@192.168.1.1:/home/danghb/pgxc_ctl
 
 
 ## for
@@ -134,7 +134,7 @@ done
 ## version
 cat /etc/redhat-release 
 
-## ssh
+## ssh  no password
 ssh-keygen
 ssh-copy-id -i .ssh/id_rsa.pub localhost2
 ssh-copy-id -i .ssh/id_rsa.pub localhost3
@@ -168,7 +168,7 @@ copysql_name=${copysql_name:0:${#copysql_name}-1}
 sh gene_copysql.sh   /home/dang/tmp/ copy_test
 
 
-## mon
+## nmon
 nmon
 nmon -h
 nmon -f -t -s 60 -f 43200
