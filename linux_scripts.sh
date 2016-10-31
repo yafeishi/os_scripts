@@ -119,6 +119,7 @@ root password 192.168.1.1 dang dang
 EOF
 
 
+## while
 cat $1|while read line; do
 rootuser=`awk 'BEGIN {split("'"$line"'",arr);print arr[1]}'`
 rootpasswd=`awk 'BEGIN {split("'"$line"'",arr);print arr[2]}'`
@@ -129,6 +130,11 @@ newuserpasswd=`awk 'BEGIN {split("'"$line"'",arr);print arr[5]}'`
 echo "---------------add user $newusername on host $ipaddr-------------"
 expect exp_adduser.exp $rootuser $rootpasswd $ipaddr $newusername $newuserpasswd
 done
+
+## 死循环
+while true; do
+  something
+done	
 
 
 ## version
