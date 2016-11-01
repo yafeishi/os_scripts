@@ -195,4 +195,8 @@ nmon -f -t -s 60 -f 43200
 nmon -f -T -s 30 -f 180
 
 
+## iostat
+iostat -x -m 5
+
+
 
